@@ -22,9 +22,9 @@ export default function Form({onAddUser}) {
 
 
     <form id="userForm" onSubmit={handleSubmit}>
-      <input type="text" id="name" placeholder="Name" required value={data.name} onChange={handleChange} />
-      <input type="email" id="email" placeholder="Email" required value={data.email} onChange={handleChange} />
-      <input type="text" id="username" placeholder="Username" required value={data.username} onChange={handleChange} />
+      <input type="text" id="name" name = "name" placeholder="Name" required value={data.name} onChange={handleChange} />
+      <input type="email" id="email" name = "email" placeholder="Email" required value={data.email} onChange={handleChange} />
+      <input type="text" id="username" name = "username" placeholder="Username" required value={data.username} onChange={handleChange} />
       <button type="submit">Add User</button>
     </form>
   )
