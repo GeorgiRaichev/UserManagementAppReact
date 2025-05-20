@@ -8,8 +8,8 @@ export default function Form({onAddUser}) {
   });
 
   const handleChange = (e) => {
-    const { id, value } = e.target;
-    setData({ ...data, [id]: value });
+    const { name, value } = e.target;
+    setData({ ...data, [name]: value });
   }
 
   const handleSubmit = (e) => {
