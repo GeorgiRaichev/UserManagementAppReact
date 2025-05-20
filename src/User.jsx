@@ -1,6 +1,6 @@
-export default function User(props){
-    return(
-        <li>{props.data.name} ({props.data.username}) - {props.data.email}</li>
+export default function User({ data: { name, username, email } }) {
+    return (
+        <li>{name} ({username}) - {email}</li>
     );
 
 }

@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function Form(props) {
+export default function Form({onAddUser}) {
   const [data, setData] = useState({
     name: '',
     email: '',
@@ -14,7 +14,7 @@ export default function Form(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.onAddUser(data);
+    onAddUser(data);
     setData({ name: '', email: '', username: '' });
   }
 
