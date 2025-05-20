@@ -9,8 +9,8 @@ export default function Container() {
   const [data, setData] = useState([])
   const onAddUser = async (newData) => {
     try {
-      setData([...data, newData]);
       const response = await service.postData(newData);
+      setData([...data, newData]);
       console.log(response);
     } catch (error) {
       console.log(error.message());
@@ -22,7 +22,7 @@ export default function Container() {
     async function fetchData() {
       try {
         const newData = await service.getData();
-        setData(...data, newData);
+        setData(newData);
       } catch (error) {
         console.log(error.message())
       }
@@ -37,8 +37,7 @@ export default function Container() {
       <h2>Add New User</h2>
       <Form onAddUser={onAddUser} />
       <h2>Users List</h2>
-      <ul id="usersList"></ul>
-      {data.map(user => <User key={user.username} data={user} />)}
+      <ul id="usersList">{data.map(user => <User key={user.username} data={user} />)}</ul>
     </div>
   )
 
