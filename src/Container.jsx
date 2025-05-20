@@ -38,7 +38,7 @@ export default function Container() {
       <Form onAddUser={onAddUser} />
       <h2>Users List</h2>
       <ul id="usersList"></ul>
-      {data.map(x => <User key={x.username} data={x} />)}
+      {data.map(user => <User key={user.username} data={user} />)}
     </div>
   )
 
